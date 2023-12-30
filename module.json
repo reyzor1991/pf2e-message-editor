@@ -1,0 +1,41 @@
+{
+  "id": "pf2e-message-editor",
+  "title": "PF2e Message Editor",
+  "description": "Module for editing messages in chat",
+  "version": "0.0.52",
+  "authors": [
+    {
+      "name": "Reyzor",
+      "url": "https://github.com/reyzor1991",
+      "discord": "reyzor1991"
+    }
+  ],
+  "languages": [],
+  "esmodules": [
+    "pf2e-message-editor.js"
+  ],
+  "styles": [
+    "pf2e-message-editor.css"
+  ],
+  "packFolders": [],
+  "packs": [],
+  "media": [],
+  "compatibility": {
+    "minimum": "11",
+    "verified": "11.315"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "pf2e",
+        "type": "system",
+        "manifest": "https://github.com/foundryvtt/pf2e/releases/latest/download/system.json",
+        "compatibility": {
+          "minimum": "5.11.5",
+          "verified": "5.11.5"
+        }
+      }
+    ],
+    "requires": []
+  }
+}
