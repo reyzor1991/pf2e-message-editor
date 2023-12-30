@@ -11,7 +11,7 @@ class MessageEditor extends FormApplication {
         const rollData = { ...this.message?.item?.getRollData(), ...this.message?.actor?.getRollData() };
 
         return mergeObject(super.getData(), {
-            content: await TextEditor.enrichHTML(this.message.content, {
+            content: await TextEditor.enrichHTML((this.message.flavor ? this.message.flavor : this.message.content), {
                 rollData,
                 secrets: this.message.isOwner,
             }),
@@ -33,8 +33,9 @@ class MessageEditor extends FormApplication {
     }
 
     async _updateObject(_event, data) {
+        let fieldName = this.message.flavor ? 'flavor' : 'content'
         await this.message.update({
-            content: data.content,
+            [fieldName]: data.content,
             timestamp: Date.now()
         })
     }
@@ -45,6 +46,7 @@ class MessageEditor extends FormApplication {
 }
 
 Hooks.on("renderChatMessage", async (message, html) => {
+    if (!game.user.isGM) {return}
     html.find('.message-metadata .message-delete').before(`<a aria-label="Edit" class="message-edit"><i class="fas fa-edit"></i></a>`)
 
     html.on('click', '.message-metadata .message-edit', function() {
