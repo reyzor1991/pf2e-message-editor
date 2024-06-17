@@ -2,7 +2,7 @@
   "id": "pf2e-message-editor",
   "title": "PF2e Message Editor",
   "description": "Module for editing messages in chat",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "authors": [
     {
       "name": "Reyzor",
@@ -22,7 +22,7 @@
   "media": [],
   "compatibility": {
     "minimum": "11",
-    "verified": "11.315"
+    "verified": "12.327"
   },
   "manifest": "https://github.com/reyzor1991/pf2e-message-editor/releases/latest/download/module.json",
   "download": "https://github.com/reyzor1991/pf2e-message-editor/releases/latest/download/pf2e-message-editor.zip",
@@ -38,7 +38,7 @@
         "manifest": "https://github.com/foundryvtt/pf2e/releases/latest/download/system.json",
         "compatibility": {
           "minimum": "5.11.5",
-          "verified": "5.11.5"
+          "verified": "6.0.2"
         }
       }
     ],

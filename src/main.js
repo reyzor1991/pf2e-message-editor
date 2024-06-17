@@ -10,7 +10,7 @@ class MessageEditor extends FormApplication {
     async getData() {
         const rollData = { ...this.message?.item?.getRollData(), ...this.message?.actor?.getRollData() };
 
-        return mergeObject(super.getData(), {
+        return foundry.utils.mergeObject(super.getData(), {
             content: await TextEditor.enrichHTML((this.message.flavor ? this.message.flavor : this.message.content), {
                 rollData,
                 secrets: this.message.isOwner,
@@ -21,7 +21,7 @@ class MessageEditor extends FormApplication {
     }
 
     static get defaultOptions() {
-        return mergeObject(super.defaultOptions, {
+        return foundry.utils.mergeObject(super.defaultOptions, {
             title: "Message Editor",
             id: `${moduleName}`,
             classes: [moduleName],
