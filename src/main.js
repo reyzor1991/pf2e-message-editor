@@ -26,7 +26,7 @@ class MessageEditor extends FormApplication {
             id: `${moduleName}`,
             classes: [moduleName],
             template: "modules/pf2e-message-editor/templates/message.hbs",
-            width: 500,
+            width: 480,
             height: "auto",
             resizable: true,
         });

@@ -6,4 +6,5 @@
 
 .pf2e-message-editor .editor {
     min-height: 200px;
+    display: flex;
 }
