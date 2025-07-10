@@ -1,9 +1,9 @@
-<form class="{{cssClass}}" autocomplete="off">
-    <section class="editable">
-        <div class="messsage">
-            <div class="messsage-content">
-                {{editor content target="content" button=true owner=owner editable=editable}}
-            </div>
+<section class="editable">
+    <div class="messsage">
+        <div class="messsage-content scrollable">
+            <prose-mirror name="content" data-document-u-u-i-d="{{documenUuid}}" value="{{content}}" collaborate="true" toggled="true">
+                {{{enrichedContent}}}
+            </prose-mirror>
         </div>
-    </section>
-</form>
+    </div>
+</section>
